@@ -34,5 +34,14 @@
 }
 .youImc{
   color: #fff;
-  margin-bottom: 3em;
+  margin-bottom: 1em;
+}
+.message{
+  color: #fff;
+  padding: .5em 2em;
+  text-align: center;
+}
+.weightRange{
+  color: #fff;
+  padding: 1em;
 }
