@@ -38,14 +38,14 @@ const App = () => {
 
           <input 
           type="number" 
-          placeholder='Digite a sua altura (em metros). Ex: 1.5'
+          placeholder='Digite a sua altura (Metros). Ex: 1.5'
           value={(heightField > 0) ? heightField : ''}
           onChange={e => setHeightField(e.target.valueAsNumber)}
           disabled={toShow ? true : false}
           />
           <input 
           type="number" 
-          placeholder='Digite o seu peso (em kg). Ex: 85.5'
+          placeholder='Digite o seu peso (Kg). Ex: 85.5'
           value={(weightField > 0) ? weightField : ''}
           onChange={e => setWeightField(e.target.valueAsNumber)}
           disabled={toShow ? true : false}
@@ -72,6 +72,10 @@ const App = () => {
             </div>
           }
         </div>
+      </div>
+      <div className={styles.footer}>
+        <p>Desenvolvido por Lucas Sousa</p>
+        <p>Layout B7Web</p>
       </div>
     </div>
   );
