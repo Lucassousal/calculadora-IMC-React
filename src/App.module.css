@@ -1,11 +1,25 @@
+:root{
+  --bgColor:#333;
+  --primaryColor:#227c9d;
+  --fontColor:#fff;
+  --placeholerColor:#b4b4b4;
+}
 * { box-sizing: border-box;}
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
+  background-color: var(--bgColor);
+}
+.main{
+
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .headerContainer{
   max-width: 900px;
-  margin: 40px auto;
+  margin: 40px auto 40px auto;
 }
 .headerContainer img{
   width: 70px;
@@ -18,16 +32,19 @@ body {
 }
 .container .leftSide{
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .container .leftSide h1 {
  font-size: 2.5em;
- color: #3a4b5c;
+ color: var(--primaryColor);
  margin: 0;
 }
 .container .leftSide p {
   font-size: 1em;
   margin-bottom: 2.5em;
-  color: #6a7d8b;
+  color: var(--fontColor);
 }
 .container .leftSide input{
   width: 100%;
@@ -37,16 +54,22 @@ body {
   margin-bottom: 1.5em;
   font-size: 1em;
   outline: 0;
+  background-color: var(--bgColor);
+  color: var(--fontColor);
 }
+.container .leftSide input::placeholder{
+  color:var(--placeholerColor);
+}
+
 .container .leftSide input:disabled{
   opacity: .5;
   cursor: not-allowed;
 }
 
 .container .leftSide button {
-  background-color: #227c9d;
+  background-color: var(--primaryColor);
   border-radius: 10px;
-  color: #fff;
+  color: var(--fontColor);
   font-size: 1em;
   margin-top: 3em;
   padding: 1em;
@@ -56,7 +79,7 @@ body {
   transition: all ease-in-out .2s;
 }
 .container .leftSide button:hover{
-  opacity: .8;
+  scale: 1.1;
 }
 .container .leftSide button:disabled{
   opacity: .5;
@@ -80,7 +103,7 @@ body {
 .container .rightSide .rightArrow{
   width: 70px;
   height: 70px;
-  background-color: #227c9d;
+  background-color: var(--primaryColor);
   border-radius: 50%;
   position: absolute;
   display: flex;
@@ -103,11 +126,19 @@ body {
   font-size: 0.7rem ;
   margin-top: 50px;
   padding: 10px;
-  background-color: #227C9D;
+  background-color: var(--primaryColor);
 }
 .footer p{
   margin: 0;
-  color: #fff;
+  color: var(--fontColor);
+}
+@media(min-width:771px) and (max-width:930px){
+  header {
+    padding: 0 20px;
+  }
+  .container{
+    padding: 0 20px;
+  }
 }
 
 @media(max-width:770px){

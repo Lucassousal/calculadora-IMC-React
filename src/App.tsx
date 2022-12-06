@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { KeyboardEvent, useState } from 'react';
 import styles from'./App.module.css';
 import poweredImage from './assets/powered.png';
 import leftArrowImage from './assets/leftarrow.png'
@@ -51,7 +51,7 @@ const App = () => {
           disabled={toShow ? true : false}
           />
 
-          <button onClick={handleCalculateButton} disabled={toShow ? true : false}>Calcular</button>
+          <button onClick={handleCalculateButton} onKeyDown={handleCalculateButton} disabled={toShow ? true : false}>Calcular</button>
 
 
         </div>
@@ -65,7 +65,7 @@ const App = () => {
           }
           {toShow &&
             <div className={styles.rightBig}>
-              <div className={styles.rightArrow}>
+              <div className={styles.rightArrow} onClick={handleClearButton}>
                 <img src={leftArrowImage} alt="" width={25} onClick={handleClearButton}/>
               </div>
               <GridItem item={toShow}/>
@@ -74,7 +74,7 @@ const App = () => {
         </div>
       </div>
       <div className={styles.footer}>
-        <p>Desenvolvido por Lucas Sousa</p>
+        <p>Desenvolvido e modificado por Lucas Sousa</p>
         <p>Layout B7Web</p>
       </div>
     </div>
